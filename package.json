@@ -1,0 +1,16 @@
+{
+  "name": "igposting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node imageDownload.js && node index"
+  },
+  "author": "Piyush Suthar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "instagram-private-api": "^1.40.1",
+    "request": "^2.88.2"
+  }
+}
