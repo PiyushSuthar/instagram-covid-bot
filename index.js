@@ -3,6 +3,7 @@ const {IgApiClient} = require('instagram-private-api');
 const {promisify} = require('util');
 const {readFile, createWriteStream} = require('fs');
 const readFileAsync = promisify(readFile);
+const getCaption = require("./getCaption")
 
 const ig = new IgApiClient();
 
@@ -24,6 +25,7 @@ async function login() {
       // not required
       searchQuery: 'Margao',
     };
+    
   
     /**
      * Get the place
@@ -43,7 +45,7 @@ async function login() {
 
       file: await readFileAsync(path),
       // optional, default ''
-      caption: 'Covid-19 Cases worldWide',
+      caption: await getCaption(),
       // optional
       location: mediaLocation,
       // optional
@@ -56,7 +58,7 @@ async function login() {
     });
   
     console.log(publishResult);
-  })();
+  })().catch(err=>console.log(err)  )
   
   /**
    * Generate a usertag

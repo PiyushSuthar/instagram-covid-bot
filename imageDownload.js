@@ -1,7 +1,8 @@
+require('dotenv').config()
 const fs = require('fs')
 const request = require('request')
 
-var url = "https://loremflickr.com/700/700/nature"
+var url = process.env.IMAGE_URL
 request.head(url, (err, res, body) => {
     request(url)
         .pipe(fs.createWriteStream("myImage.jpg"))
