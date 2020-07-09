@@ -15,6 +15,13 @@ npm install
 
 ## Usage
 
+### Environment variables
+```
+IG_USERNAME= UserName
+IG_PASSWORD= Password
+IMAGE_URL= Image Url or use mine "https://covid-img.herokuapp.com/ig/"
+```
+
 ```sh
 npm run start
 ```
