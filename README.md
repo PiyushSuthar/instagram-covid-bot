@@ -14,6 +14,7 @@ npm install
 ```
 
 ## Usage
+> Not recommended to use with primary account, as this isn't the official api.
 
 ### Environment variables
 ```
